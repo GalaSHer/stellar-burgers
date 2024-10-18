@@ -5,6 +5,7 @@ import { reducer as userProfileReducer } from './slices/userProfileSlice';
 import { reducer as feedReducer } from './slices/feedSlice';
 import { reducer as ordersReducer } from './slices/profileOrdersSlice';
 import { reducer as orderReducer } from './slices/orderSlice';
+import { reducer as modalReducer } from './slices/modalSlice';
 
 import {
   TypedUseSelectorHook,
@@ -18,7 +19,8 @@ const rootReducer = {
   user: userProfileReducer,
   feed: feedReducer,
   orders: ordersReducer,
-  order: orderReducer
+  order: orderReducer,
+  modal: modalReducer
 };
 
 const store = configureStore({

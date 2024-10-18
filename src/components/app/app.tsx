@@ -22,6 +22,7 @@ import {
   getUserData,
   isAuthUserSelector
 } from '@slices/userProfileSlice';
+import { getOrderSelector } from '@slices/orderSlice';
 
 const App = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const App = () => {
   const location = useLocation();
   const backgroundLocation = location.state?.background;
   const isAuthUser = useSelector(isAuthUserSelector);
+  const orderData = useSelector(getOrderSelector);
 
   useEffect(() => {
     dispatch(checkUserAuth());
@@ -120,7 +122,10 @@ const App = () => {
           <Route
             path='/feed/:number'
             element={
-              <Modal title={'Детали заказа'} onClose={() => navigate('/feed')}>
+              <Modal
+                title={orderData ? `#${orderData.number}` : ''}
+                onClose={() => navigate('/feed')}
+              >
                 <OrderInfo />
               </Modal>
             }
@@ -130,7 +135,7 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <Modal
-                  title={'Детали заказа'}
+                  title={orderData ? `#${orderData.number}` : ''}
                   onClose={() => {
                     navigate('/profile/orders');
                   }}
