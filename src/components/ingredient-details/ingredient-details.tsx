@@ -7,9 +7,12 @@ import {
   getIngredients,
   getIngredientsSelector
 } from '@slices/burgerIngredientsSlice';
+import { isModalOpenSelector } from '@slices/modalSlice';
+import { IngredientDetailswithHeaderUI } from '../ui/ingredient-details/ingredient-details-withHeader';
 
 export const IngredientDetails: FC = () => {
   const ingredients = useSelector(getIngredientsSelector);
+  const inModal = useSelector(isModalOpenSelector);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,5 +28,9 @@ export const IngredientDetails: FC = () => {
     return <Preloader />;
   }
 
-  return <IngredientDetailsUI ingredientData={ingredientData} />;
+  if (inModal) {
+    return <IngredientDetailsUI ingredientData={ingredientData} />;
+  }
+
+  return <IngredientDetailswithHeaderUI ingredientData={ingredientData} />;
 };
