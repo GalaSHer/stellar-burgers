@@ -1,7 +1,7 @@
 import { FC, FormEvent } from 'react';
 import { LoginUI } from '@ui-pages';
 import { useDispatch } from '@services/store';
-import { loginUser } from '@slices/userProfileSlice';
+import { loginUser } from '@slices/userProfileSlice/userProfileSlice';
 import { useForm } from '@services/hooks/useForm';
 
 export const Login: FC = () => {

@@ -1,5 +1,5 @@
 import { useSelector } from '@services/store';
-import { getUserDataSelector } from '@slices/userProfileSlice';
+import { getUserDataSelector } from '@slices/userProfileSlice/userProfileSlice';
 import { Preloader } from '@ui';
 import { Navigate, useLocation } from 'react-router-dom';
 

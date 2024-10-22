@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { TModalProps } from './type';
 import { ModalUI } from '@ui';
 import { useDispatch } from '@services/store';
-import { closeModal, openModal } from '@slices/modalSlice';
+import { closeModal, openModal } from '@slices/modalSlice/modalSlice';
 
 const modalRoot = document.getElementById('modals');
 

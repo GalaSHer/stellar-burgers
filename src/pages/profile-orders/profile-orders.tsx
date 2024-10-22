@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from '@services/store';
 import {
   getOrders,
   getProfileOrdersSelector
-} from '@slices/profileOrdersSlice';
+} from '@slices/profileOrdersSlice/profileOrdersSlice';
 import { ProfileOrdersUI } from '@ui-pages';
 import { TOrder } from '@utils-types';
 import { FC, useEffect } from 'react';

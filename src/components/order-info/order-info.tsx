@@ -6,14 +6,14 @@ import { useDispatch, useSelector } from '@services/store';
 import {
   getIngredients,
   getIngredientsSelector
-} from '@slices/burgerIngredientsSlice';
+} from '@slices/burgerIngredientsSlice/burgerIngredientsSlice';
 import {
   clearOrder,
   getOrderByNumber,
   getOrderSelector
-} from '@slices/orderSlice';
+} from '@slices/orderSlice/orderSlice';
 import { useParams } from 'react-router-dom';
-import { isModalOpenSelector } from '@slices/modalSlice';
+import { isModalOpenSelector } from '@slices/modalSlice/modalSlice';
 import { OrderInfoWithHeaderUI } from '../ui/order-info/order-info-withHeader';
 
 export const OrderInfo: FC = () => {

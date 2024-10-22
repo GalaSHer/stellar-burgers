@@ -1,11 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { reducer as burgerIngredientsReducer } from './slices/burgerIngredientsSlice';
-import { reducer as burgerConstructorReducer } from './slices/burgerConstructorSlice';
-import { reducer as userProfileReducer } from './slices/userProfileSlice';
-import { reducer as feedReducer } from './slices/feedSlice';
-import { reducer as ordersReducer } from './slices/profileOrdersSlice';
-import { reducer as orderReducer } from './slices/orderSlice';
-import { reducer as modalReducer } from './slices/modalSlice';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { reducer as burgerIngredientsReducer } from './slices/burgerIngredientsSlice/burgerIngredientsSlice';
+import { reducer as burgerConstructorReducer } from './slices/burgerConstructorSlice/burgerConstructorSlice';
+import { reducer as userProfileReducer } from './slices/userProfileSlice/userProfileSlice';
+import { reducer as feedReducer } from './slices/feedSlice/feedSlice';
+import { reducer as ordersReducer } from './slices/profileOrdersSlice/profileOrdersSlice';
+import { reducer as orderReducer } from './slices/orderSlice/orderSlice';
+import { reducer as modalReducer } from './slices/modalSlice/modalSlice';
 
 import {
   TypedUseSelectorHook,
@@ -13,7 +13,7 @@ import {
   useSelector as selectorHook
 } from 'react-redux';
 
-const rootReducer = {
+export const rootReducer = combineReducers({
   ingredients: burgerIngredientsReducer,
   burger: burgerConstructorReducer,
   user: userProfileReducer,
@@ -21,7 +21,7 @@ const rootReducer = {
   orders: ordersReducer,
   order: orderReducer,
   modal: modalReducer
-};
+});
 
 const store = configureStore({
   reducer: rootReducer,

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from '@services/store';
-import { getIngredients } from '@slices/burgerIngredientsSlice';
-import { getFeed, getOrdersSelector } from '@slices/feedSlice';
+import { getIngredients } from '@slices/burgerIngredientsSlice/burgerIngredientsSlice';
+import { getFeed, getOrdersSelector } from '@slices/feedSlice/feedSlice';
 import { Preloader } from '@ui';
 import { FeedUI } from '@ui-pages';
 import { TOrder } from '@utils-types';

@@ -4,16 +4,16 @@ import { BurgerConstructorUI } from '@ui';
 import {
   clearConstructor,
   getBurgerSelector
-} from '@slices/burgerConstructorSlice';
+} from '@slices/burgerConstructorSlice/burgerConstructorSlice';
 import { useDispatch, useSelector } from '@services/store';
 import {
   clearOrder,
   makeOrder,
   getOrderSelector,
   orderLoadingSelector
-} from '@slices/orderSlice';
+} from '@slices/orderSlice/orderSlice';
 import { useNavigate } from 'react-router-dom';
-import { isAuthUserSelector } from '@slices/userProfileSlice';
+import { isAuthUserSelector } from '@slices/userProfileSlice/userProfileSlice';
 
 export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
