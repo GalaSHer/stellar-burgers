@@ -1,5 +1,8 @@
 import { useDispatch, useSelector } from '@services/store';
-import { getUserDataSelector, updateUser } from '@slices/userProfileSlice';
+import {
+  getUserDataSelector,
+  updateUser
+} from '@slices/userProfileSlice/userProfileSlice';
 import { ProfileUI } from '@ui-pages';
 import { FC, SyntheticEvent, useEffect, useState } from 'react';
 

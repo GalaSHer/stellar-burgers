@@ -21,8 +21,8 @@ import {
   checkUserAuth,
   getUserData,
   isAuthUserSelector
-} from '@slices/userProfileSlice';
-import { getOrderSelector } from '@slices/orderSlice';
+} from '@slices/userProfileSlice/userProfileSlice';
+import { getOrderSelector } from '@slices/orderSlice/orderSlice';
 
 const App = () => {
   const navigate = useNavigate();

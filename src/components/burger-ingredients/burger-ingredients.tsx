@@ -7,7 +7,7 @@ import {
   getIngredients,
   getIngredientsSelector,
   ingredientsLoadingSelector
-} from '@slices/burgerIngredientsSlice';
+} from '@slices/burgerIngredientsSlice/burgerIngredientsSlice';
 import { useDispatch, useSelector } from '@services/store';
 
 export const BurgerIngredients: FC = () => {

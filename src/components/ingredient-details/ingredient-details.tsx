@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from '@services/store';
 import {
   getIngredients,
   getIngredientsSelector
-} from '@slices/burgerIngredientsSlice';
-import { isModalOpenSelector } from '@slices/modalSlice';
+} from '@slices/burgerIngredientsSlice/burgerIngredientsSlice';
+import { isModalOpenSelector } from '@slices/modalSlice/modalSlice';
 import { IngredientDetailswithHeaderUI } from '../ui/ingredient-details/ingredient-details-withHeader';
 
 export const IngredientDetails: FC = () => {
